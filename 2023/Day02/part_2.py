@@ -29,19 +29,11 @@ def power(subset: Subset) -> int:
     return power
 
 if __name__ == "__main__":
-
-    # test
-    game = parse_game("Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green")
-    print(power(find_least_count_for_subsets(game.subsets)))
-    
-
     all_games = []
     for line in data:
         game = parse_game(line)
         all_games.append(game)
-    # print(all_games[0])
-    # print(find_least_count_for_subsets(all_games[0].subsets))
-
+ 
     # Find the smallest parts of the subsets
     smallest_parts = []
     for game in all_games:
